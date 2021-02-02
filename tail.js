@@ -13,4 +13,10 @@ assertEqual(words.length, 4); // original array should still have 3 elements!
 
 assertEqual(tail(words)[0],words[1]);
 
+x = 12;
+if(true) {
+  x + 2;
+  x = 4;
+}
+console.log(x);
 
