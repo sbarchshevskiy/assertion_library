@@ -1,15 +1,16 @@
 const assertEqual = require('./assertEqual');
 
 const eqArrays = function(arr1, arr2) {
+  
+  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
+    return true;
+  }
   // let result = true;
   // for (let i = 0; i < arr1.length; i++) {
   //   if (arr1[i] !== arr2[i]) {
   //     result = false;
   //   }
   // }
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    return true;
-  }
   // return result;
 };
 
