@@ -6,19 +6,21 @@ const assertEqual = require('../assertEqual');
 
 describe("#tail()", function() {
 
-  it("should return assertion passed, when passing equivalent length", function() {
+  it("should return assertion passed (true) , when passing equivalent length", function() {
     const words = ["test", "Yo Yo", "Lighthouse", "Labs"];
 
     const assertMatch = assertEqual(tail(words)[0],words[1]);
     assert.isTrue(assertMatch);
   });
 
+  it("should return assertion failed (false), when passing equivalent length", function() {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+
+    const assertNotMatch = assertEqual(tail(words)[1],words[1]);
+    assert.isFalse(assertNotMatch);
+  });
+
 });
 
-
-
-// Test Case: Check the original array
-// tail(words); // no need to capture the return value since we are not checking it
-// assertEqual(words.length, 4); // original array should still have 3 elements!
 
 
