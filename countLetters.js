@@ -1,6 +1,5 @@
 const assertEqual = require('./assertEqual');
-
-
+//returns an object {key - letter : value - number} of times they occur
 const countLetters  = function(str) {
   let letters = {};
   for (let letter in str) {
@@ -12,9 +11,3 @@ const countLetters  = function(str) {
   }
   return letters;
 };
-
-
-
-console.log(countLetters('LHL'));
-console.log(countLetters('sergey'));
-

@@ -1,7 +1,6 @@
 const assertArraysEqual = require('./assertArraysEqual');
 const eqArrays = require('./eqArrays');
 
-
 const without = function(source, itemsToRemove) {
   let remainingItems = [];
   for (let i = 0; i < source.length; i++) {
@@ -16,18 +15,19 @@ const without = function(source, itemsToRemove) {
     }
   }
   return remainingItems;
-
-  // source = source.filter(value => !itemsToRemove.includes(value));
   // return source;
 };
 
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"])
-console.log(without([1, 2, 3], [1])) // => [2, 3])
+console.log(without(["1", "2", "3"], [1, 2, "3"])); // => [ '1', '2', '3' ]
+console.log(without([1, 2, 3], [1])) // => [2, 3]
 
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
-console.log(assertArraysEqual(words, ["world", "hello", "lighthouse"]));
+console.log(assertArraysEqual(words, ["world", "hello", "lighthouse"])); // returns false
+
+// alt function:
+// source = source.filter(value => !itemsToRemove.includes(value));
 
 module.exports = without;
 

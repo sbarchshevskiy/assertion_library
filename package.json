@@ -1,8 +1,8 @@
 {
-  "name": "twotide",
+  "name": "@sergey.barch/twotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertEqual.js",
+  "description": "Small assertion library",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/sbarchshevskiy/twoTide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sergey Barchshevskiy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sbarchshevskiy/twoTide/issues"

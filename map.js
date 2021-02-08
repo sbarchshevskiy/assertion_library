@@ -8,15 +8,9 @@ const map = function(array, callback) {
   for (let item of array) {
     results.push(callback(item));
   }
-  return results;
+  return results; // returns [ 'g', 'c', 't', 'm', 't' ]
 };
 
+const results = map(words, word => word[0]);
 
-const results1 = map(words, word => word[0]);
-
-
-console.log(results1);
-
-
-
-console.log(eqArrays(words, results1));
+module.exports = map;

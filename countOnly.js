@@ -1,20 +1,17 @@
 const assertEqual = require('./assertEqual');
 
-
 const countOnly = function(allItems, itemsToCount) {
   let namesToCount = {};
   for (let item in itemsToCount) {
     if (itemsToCount[item] === true) {
       namesToCount[item] = 0;
     } else {
-      console.log("No need to count this");
       namesToCount[item] = undefined;
     }
   }
   for (let items in allItems) {
     if (!isNaN(namesToCount[allItems[items]])) {
       namesToCount[allItems[items]]++;
-      console.log('names to count: ',namesToCount);
     }
   }
   for (let items in namesToCount) {
@@ -22,7 +19,6 @@ const countOnly = function(allItems, itemsToCount) {
       namesToCount[items] = undefined;
     }
   }
-  console.log('names to count at return statement: ' ,namesToCount);
   return namesToCount;
 };
 
